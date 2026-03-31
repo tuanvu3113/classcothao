@@ -22,6 +22,9 @@ body {
     color: var(--dark);
     background: #FFDEE9;
     background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -32,7 +35,7 @@ body {
 
 /* Background Animated Blobs */
 .blob {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     filter: blur(80px);
     z-index: -1;
@@ -139,7 +142,7 @@ body {
 /* Features Grid */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     align-items: stretch;
 }
@@ -331,5 +334,9 @@ body {
     
     .hero {
         margin-bottom: 3rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
     }
 }
